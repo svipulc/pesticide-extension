@@ -1,11 +1,9 @@
 let isEnabled = false;
 
+// listening to the action on extension click
 chrome.action.onClicked.addListener((tab) => {
   isEnabled = !isEnabled;
   if (!tab.id) return;
-  if (isEnabled) {
-    chrome.tabs.sendMessage(tab.id, { isEnabled });
-  } else {
-    chrome.tabs.sendMessage(tab.id, { isEnabled });
-  }
+  //sending message to content inject js file.
+  chrome.tabs.sendMessage(tab.id, { isEnabled });
 });
