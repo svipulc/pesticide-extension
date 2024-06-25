@@ -1,30 +1,45 @@
-# React + TypeScript + Vite
+# Pesticide Extension
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Pesticide Extension is a browser tool that adds visible outlines to every element on a webpage to help visualize the structure and layout of the page.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To install and build the Pesticide Extension on your local system, follow these steps:
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/yourusername/pesticide-extension.git
+   ```
+   ```
+   cd pesticide-extension
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Install dependencies:
+  Make sure you have Node.js and npm installed. Then, run:
+  ```
+  npm install
+  ```
+  Build the extension:
+  Use Vite to build the extension:
+  ```
+  npm run build
+  ```
 
-- Configure the top-level `parserOptions` property like this:
+## Usage
+  Once you have built the extension, you can load it into your browser (specific instructions may vary by browser):
+   
+  - **Google Chrome** :
+    - Open the Extension Management page by navigating to `chrome://extensions`.
+    - `Enable Developer Mode` by clicking the toggle switch next to Developer mode.
+    - Click the `Load unpacked` button and select the dist directory within your cloned repository.
+        
+  - **Mozilla Firefox** :
+    - Type `about:debugging` in the address bar.
+    - Click This `Firefox` on the left sidebar.
+    - Click `Load Temporary Add-on` and select any file in your extension's directory (manifest.json in the dist folder).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Features
+  - Adds outlines to every HTML element on a webpage.
+  - Helps in understanding the structure and layout of the page.
+  - Built with React, Vite, and TypeScript for modern development practices.
+  - Lightweight and easy to use.
